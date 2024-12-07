@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Interaktif Wisata Blora</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #map {
+            height: 90vh; /* Tinggi peta disesuaikan agar tombol terlihat */
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <!-- Tombol Kembali ke Beranda -->
+        <a href="index.html" class="button">Kembali ke Beranda</a>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([-7.015678, 111.411829], 11);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const locations = [
+            { 
+                name: "Kawasan Waduk Tempuran", 
+                coords: [-7.046630, 111.466842], 
+                page: "waduk_tempuran.html"
+            },
+            { 
+                name: "Goa Terawang", 
+                coords: [-6.977313, 111.362404], 
+                page: "goa_terawang.html"
+            },
+            { 
+                name: "Loco Tour Cepu", 
+                coords: [-7.372105, 111.641148], 
+                page: "loco_tour_cepu.html"
+            },
+            { 
+                name: "Goa Sentono", 
+                coords: [-7.074632, 111.366595], 
+                page: "goa_sentono.html"
+            },
+            { 
+                name: "Alun-Alun Blora", 
+                coords: [-7.020636, 111.415769], 
+                page: "alun_alun_blora.html"
+            }
+        ];
+
+        locations.forEach(location => {
+            const marker = L.marker(location.coords).addTo(map);
+            marker.bindPopup(`<strong>${location.name}</strong><br><a href="${location.page}" target="_blank">Lihat Detail</a>`);
+        });
+    </script>
+</body>
+</html>

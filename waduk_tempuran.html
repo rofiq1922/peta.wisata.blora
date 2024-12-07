@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawasan Waduk Tempuran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .content img {
+            max-width: 400px; /* Maksimal lebar gambar */
+            width: 100%; /* Gambar akan menyesuaikan lebar kontainer */
+            height: auto; /* Menjaga rasio aspek gambar */
+            border-radius: 8px; /* Menambahkan sedikit sudut melengkung */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
+        }
+
+        .description {
+            flex: 1 1 300px;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kawasan Waduk Tempuran</h1>
+    </header>
+
+    <div class="content">
+        <!-- Gambar Wisata -->
+        <img src="tempuranjpg.jpg" alt="Waduk Tempuran">
+
+        <!-- Deskripsi Wisata -->
+        <div class="description">
+            <p>
+                Kawasan Waduk Tempuran adalah destinasi wisata alam yang menawarkan keindahan danau dan suasana sejuk. Tempat ini cocok untuk bersantai bersama keluarga, menikmati pemandangan indah, dan melakukan aktivitas memancing. Anda juga dapat menjelajahi area sekitar waduk untuk menikmati alam Blora yang memikat.
+            </p>
+            <a href="map.html" class="button">Kembali ke Map Peta</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Peta Wisata Blora</p>
+    </footer>
+</body>
+</html>
